@@ -1,12 +1,20 @@
-- 👋 Hi, I’m @ddu2024
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+##Taken from AWS documentation##
 
-<!---
-ddu2024/ddu2024 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+###Step 1: Prerequisites###
+
+We recommend that you use the latest versions of Git and other prerequisite software.
+
+    You must install Python. To download and install the latest version of Python. View the Python website 
+    You must install and configure a Git client. View Git downloads page 
+    You must have permissions to the CodeCommit repository.
+    You must install and configure the AWS CLI with a profile.
+ 
+###Step 2: Install git-remote-codecommit###
+At a terminal or command line, run the following command to install git-remote-codecommit:
+pip install git-remote-codecommit
+
+###Step 3: Clone the repository###
+
+Clone your repository to your local computer and start working on code. Run the following command:
+git config --global init.defaultBranch main
+git clone codecommit::us-east-1://<name_of_local_aws_profile_mapped_to_aws_account>@nbme-dna-platform-preapp

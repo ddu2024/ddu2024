@@ -1,0 +1,38 @@
+{
+  "name" : "template_lz_truncate_table",
+  "description" : "",
+  "role" : "arn:aws:iam::176097555134:role/nbme-dataplatform-eng-preapp-dev-glue",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 5
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://aws-glue-assets-176097555134-us-east-1/scripts/template_lz_truncate_table.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--enable-metrics" : "true",
+    "--enable-spark-ui" : "true",
+    "--spark-event-logs-path" : "s3://aws-glue-assets-176097555134-us-east-1/sparkHistoryLogs/",
+    "--enable-job-insights" : "false",
+    "--enable-glue-datacatalog" : "true",
+    "--enable-continuous-cloudwatch-log" : "true",
+    "--job-bookmark-option" : "job-bookmark-disable",
+    "--job-language" : "python",
+    "--TempDir" : "s3://aws-glue-assets-176097555134-us-east-1/temporary/"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 2,
+  "timeout" : 60,
+  "maxCapacity" : 2.0,
+  "glueVersion" : "4.0",
+  "numberOfWorkers" : 2,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "AWS_CODE_COMMIT",
+    "repository" : "nbme-dna-platform-preapp",
+    "branch" : "main",
+    "folder" : "src/usmle_analytics/glue"
+  }
+}

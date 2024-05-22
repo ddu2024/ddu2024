@@ -1,0 +1,41 @@
+{
+  "name" : "template_lz2rz2fz_v1",
+  "description" : "",
+  "role" : "arn:aws:iam::176097555134:role/nbme-dataplatform-eng-preapp-dev-glue",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 5
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://nbme-dataplatform-eng-preapp-dev-staging-zone/script_files/usmle_analytics/template_lz2rz2fz_v1.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--enable-metrics" : "true",
+    "--enable-spark-ui" : "true",
+    "--spark-event-logs-path" : "s3://nbme-dataplatform-eng-preapp-dev-staging-zone/log_files/usmle_analytics/",
+    "--enable-job-insights" : "false",
+    "--enable-glue-datacatalog" : "true",
+    "--enable-continuous-cloudwatch-log" : "true",
+    "--job-bookmark-option" : "job-bookmark-disable",
+    "--job-language" : "python",
+    "--TempDir" : "s3://nbme-dataplatform-eng-preapp-dev-staging-zone/temp_files/usmle_analytics/"
+  },
+  "connections" : {
+    "connections" : [ "redshift_usmle_analytics" ]
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 10,
+  "timeout" : 60,
+  "maxCapacity" : 10.0,
+  "glueVersion" : "4.0",
+  "numberOfWorkers" : 10,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "AWS_CODE_COMMIT",
+    "repository" : "nbme-dna-platform-preapp",
+    "branch" : "main",
+    "folder" : "src/usmle_analytics/glue"
+  }
+}

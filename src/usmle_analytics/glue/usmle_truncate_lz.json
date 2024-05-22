@@ -1,0 +1,48 @@
+{
+  "name" : "usmle_truncate_lz",
+  "description" : "",
+  "role" : "arn:aws:iam::176097555134:role/nbme-dataplatform-eng-preapp-dev-glue",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://nbme-dataplatform-eng-preapp-dev-staging-zone/script_files/customer_dashboard/usmle_truncate_lz.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--qc_email_groups" : "IT,PADA,TDS,ITS",
+    "--DEFAULT_EMAIL_ADDR" : "dwservice@nbme.org",
+    "--enable-glue-datacatalog" : "true",
+    "--job-bookmark-option" : "job-bookmark-disable",
+    "--TempDir" : "s3://nbme-dataplatform-eng-preapp-dev-staging-zone/temp_files/customer_dashboard/",
+    "--extra-jars" : "s3://nbme-dataplatform-eng-preapp-dev-staging-zone/jar_files/json-serde.jar",
+    "--class" : "GlueApp",
+    "--environment" : "preapp-dev",
+    "--enable-metrics" : "true",
+    "--enable-spark-ui" : "true",
+    "--extra-py-files" : "s3://nbme-dataplatform-eng-preapp-dev-staging-zone/script_files/nbme_util.zip",
+    "--spark-event-logs-path" : "s3://nbme-dataplatform-eng-preapp-dev-staging-zone/log_files/customer_dashboard/",
+    "--enable-job-insights" : "true",
+    "--group_dl" : "{'IT': ['dwservice@nbme.org'], 'PADA': ['sregan@nbme.org'], 'TDS': ['sregan@nbme.org'], 'ITS': ['sregan@nbme.org']}",
+    "--enable-continuous-cloudwatch-log" : "true",
+    "--job-language" : "python"
+  },
+  "connections" : {
+    "connections" : [ "redshift_customer_dashboard" ]
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 2,
+  "timeout" : 60,
+  "maxCapacity" : 2.0,
+  "glueVersion" : "3.0",
+  "numberOfWorkers" : 2,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "AWS_CODE_COMMIT",
+    "repository" : "nbme-dna-platform-preapp",
+    "branch" : "main",
+    "folder" : "src/usmle_analytics/glue"
+  }
+}
