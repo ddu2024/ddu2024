@@ -1,0 +1,17 @@
+spring.datasource.testOnBorrow=true
+spring.datasource.validationQuery=SELECT 1
+spring.datasource.timeBetweenEvictionRunsMillis=120000
+spring.datasource.testWhileIdle=true
+
+spring.jpa.database-platform=org.hibernate.dialect.Oracle12cDialect
+
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.properties.hibernate.show_sql=false
+
+# Oracle settings
+spring.datasource.username=${u}
+spring.datasource.password=${p}
+spring.datasource.driver.class=oracle.jdbc.driver.OracleDriver
+spring.datasource.initialize=false
+
+

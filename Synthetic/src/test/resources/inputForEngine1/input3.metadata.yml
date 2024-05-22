@@ -1,0 +1,1103 @@
+!!org.nbme.dwbi.synthetic.model.Metadata
+objects:
+
+- containerName: table_1
+  containerType: CSV
+  fields:
+
+  - fieldType: INC_INT
+    name: profile_examinee_id
+
+  - fieldType: INC_INT
+    name: report_id
+    reference: table_2.report_id
+
+  - fieldType: STATIC
+    high: 9.99999999E8
+    name: sort_order
+    staticValue: '1'
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 45
+      - 55
+      fields:
+
+      - fieldType: STR
+        maxLen: 11
+        minLen: 1
+
+      - fieldType: INC_INT
+    name: examinee_id
+
+  - fieldType: EMPTY
+    maxLen: 40
+    name: last_name
+
+  - fieldType: FIRST_NAME
+    maxLen: 100
+    name: first_name
+
+  - fieldType: EMPTY
+    maxLen: 30
+    name: middle_name
+
+  - dateFormat: MM/dd/yyyy hh:mm:ss a
+    fieldType: DATE
+    maxDate: 1600310889000
+    minDate: 1571396127000
+    name: test_date
+
+  - fieldType: INT
+    high: 267.0
+    low: 70.0
+    name: total_test_score
+
+  - fieldType: EMPTY
+    name: total_raw_score
+
+  - fieldType: EMPTY
+    name: total_percent_correct_score
+
+  - fieldType: EMPTY
+    name: total_sem
+
+  - fieldType: STATIC
+    name: primary_category_description
+    staticValue: zjHaM
+
+  - fieldType: INC_INT
+    maxLen: 30
+    name: taps_examinee_id
+
+  - dateFormat: MM/dd/yyyy hh:mm:ss a
+    fieldType: DATE
+    maxDate: 1600109897000
+    minDate: 1571313748000
+    name: original_exam_date
+
+  - fieldType: EMPTY
+    name: report_period_start_date
+
+  - fieldType: EMPTY
+    name: report_period_end_date
+
+  - fieldType: STR
+    maxLen: 9
+    minLen: 9
+    name: exam_instance
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 1
+      - 3
+      - 96
+      fields:
+
+      - fieldType: STATIC
+        staticValue: South Hyatt College
+
+      - fieldType: SCHOOL
+
+      - fieldType: EMPTY
+    name: school_cohort
+
+  - fieldType: STATIC
+    name: score_category_id
+    staticValue: '1'
+
+  - fieldType: INC_INT
+    name: histogram_set_id
+    reference: table_3.histogram_set_id
+
+  - fieldType: EMPTY
+    high: 999.0
+    name: recent_mean
+
+  - fieldType: EMPTY
+    high: 999.0
+    name: recent_sd
+
+  - fieldType: EMPTY
+    name: profile_char_size
+
+  - fieldType: EMPTY
+    high: 999.0
+    name: pass_probability
+
+- containerName: table_2
+  containerType: CSV
+  fields:
+
+  - fieldType: INC_INT
+    name: report_id
+
+  - fieldType: INC_INT
+    name: source_id
+
+  - fieldType: STR
+    name: report_type_id
+    reference: table_6.report_type_id
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 6
+      - 94
+      fields:
+
+      - fieldType: STATIC
+        staticValue: '0'
+
+      - fieldType: EMPTY
+    name: sort_order
+
+  - fieldType: STATIC
+    name: active_flag
+    staticValue: N
+
+  - fieldType: FILE
+    maxLen: 250
+    name: destination_document_path
+
+  - fieldType: STATIC
+    name: template_document
+    staticValue: zjHaMiWMh
+
+  - fieldType: STATIC
+    name: school_id
+    staticValue: '1'
+
+  - fieldType: STATIC
+    name: org_party_id
+    staticValue: '1'
+
+  - fieldType: STATIC
+    name: school_name
+    staticValue: South Hyatt College
+
+  - fieldType: STATIC
+    name: exam_name
+    staticValue: zjHaMiWMhslHtBEXzhSADlYhGmD
+
+  - fieldType: STATIC
+    name: scaling_mean
+    staticValue: '70'
+
+  - fieldType: STATIC
+    name: scaling_sd
+    staticValue: '8'
+
+  - fieldType: STATIC
+    name: sem_bar_width_factor
+    staticValue: '1.5'
+
+  - fieldType: STATIC
+    name: sd_graph_width_factor
+    staticValue: '2.5'
+
+  - fieldType: STATIC
+    name: physical_chart_width
+    staticValue: '4'
+
+  - fieldType: EMPTY
+    name: post_date
+
+  - fieldType: STATIC
+    name: graph_left_position
+    staticValue: '50'
+
+  - fieldType: STATIC
+    name: graph_right_position
+    staticValue: '90'
+
+  - fieldType: STATIC
+    name: physical_unit_factor
+    staticValue: '0.1'
+
+  - dateFormat: MM/dd/yyyy hh:mm:ss a
+    fieldType: DATE
+    maxDate: 1219424189000
+    minDate: 1219325492000
+    name: create_date
+
+  - booleanType: Y|N
+    fieldType: BOOLEAN
+    name: location_only_flag
+
+  - fieldType: EMPTY
+    name: physical_band_left_position
+
+  - fieldType: EMPTY
+    name: physical_band_right_position
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: left_title
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: right_title
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: band_title
+
+  - fieldType: STR
+    name: report_status
+    reference: table_4.report_status
+
+  - fieldType: EMPTY
+    name: band_left_position
+
+  - fieldType: EMPTY
+    name: band_right_position
+
+  - fieldType: EMPTY
+    name: marker_line_position
+
+  - fieldType: EMPTY
+    name: physical_marker_line_position
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: marker_line_title
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: report_catalog
+
+  - fieldType: EMPTY
+    name: total_examinee_volume
+
+  - fieldType: EMPTY
+    name: profile_required_flag
+
+  - fieldType: EMPTY
+    name: longitude_required_flag
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: graph_low_title
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: graph_high_title
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: graph_title
+
+  - fieldType: EMPTY
+    name: graph_low_position
+
+  - fieldType: EMPTY
+    name: graph_high_position
+
+  - fieldType: EMPTY
+    name: graph_inter_range
+
+  - fieldType: EMPTY
+    maxLen: 7
+    name: exam
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: requester_internet_address
+
+  - fieldType: EMPTY
+    name: sig_sem
+
+  - fieldType: EMPTY
+    name: sig_proficiency
+
+  - fieldType: EMPTY
+    name: profile_all_report_id
+
+  - fieldType: EMPTY
+    name: preliminary_flag
+
+  - fieldType: EMPTY
+    name: score_type
+
+  - fieldType: EMPTY
+    name: modular_order_flag
+
+  - fieldType: INC_INT
+    name: report_config_id
+    reference: table_5.report_config_id
+
+- containerName: table_3
+  containerType: CSV
+  fields:
+
+  - fieldType: INC_INT
+    name: histogram_set_id
+
+  - fieldType: STR
+    maxLen: 7
+    minLen: 5
+    name: exam
+
+  - fieldType: STR
+    maxLen: 30
+    minLen: 28
+    name: remarks
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 7
+      - 2
+      fields:
+
+      - dateFormat: MM/dd/yyyy
+        fieldType: DATE
+        maxDate: 1651377600000
+        minDate: 1641704400000
+
+      - fieldType: EMPTY
+    name: effective_start_date
+
+  - dateFormat: MM/dd/yyyy HH:mm:ss
+    fieldType: DATE
+    maxDate: 1645236480000
+    minDate: 1575150120000
+    name: create_date
+
+  - dateFormat: MM/dd/yyyy HH:mm:ss
+    fieldType: DATE
+    maxDate: 1657128360000
+    minDate: 1656549180000
+    name: last_updated_date
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 7
+      - 2
+      fields:
+
+      - fieldType: INT
+        high: 245.0
+        low: 232.0
+
+      - fieldType: EMPTY
+    name: mean_score
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 8
+      - 1
+      fields:
+
+      - fieldType: INT
+        high: 19.0
+        low: 16.0
+
+      - fieldType: EMPTY
+    name: std
+
+  - fieldType: INT
+    high: 7.0
+    low: 3.0
+    name: see
+
+  - fieldType: INT
+    high: 185.0
+    low: 70.0
+    name: mps
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 5
+      - 4
+      fields:
+
+      - fieldType: STR
+        maxLen: 11
+        minLen: 4
+
+      - fieldType: STATIC
+        staticValue: '2020'
+    name: comparison_group_time_period
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 6
+      - 3
+      fields:
+
+      - fieldType: INT
+        high: 17.0
+        low: 9.0
+
+      - fieldType: EMPTY
+    name: mps_plus
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 7
+      - 2
+      fields:
+
+      - fieldType: INT
+        high: 278.0
+        low: 104.0
+
+      - fieldType: EMPTY
+    name: score_range
+
+  - fieldType: STATIC
+    name: active_flag
+    staticValue: Y
+
+  - fieldType: STATIC
+    name: histogram_flag
+    staticValue: Y
+
+  - fieldType: INT
+    high: 149.0
+    low: 118.0
+    name: hist_bucket_score_num
+
+  - fieldType: INT
+    high: 127.0
+    low: 10.0
+    name: hist_noshow_score_num
+
+- containerName: table_4
+  containerType: CSV
+  fields:
+
+  - fieldType: STR
+    maxLen: 16
+    minLen: 5
+    name: report_status
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 91
+      - 9
+      fields:
+
+      - fieldType: STR
+        maxLen: 23
+        minLen: 14
+
+      - fieldType: EMPTY
+    name: report_status_description
+
+- containerName: table_5
+  containerType: CSV
+  fields:
+
+  - fieldType: INC_INT
+    name: report_config_id
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 65
+      - 35
+      fields:
+
+      - fieldType: STR
+        maxLen: 43
+        minLen: 20
+
+      - fieldType: SENTENCE
+        maxLen: 43
+        minLen: 20
+    name: report_config_name
+
+  - fieldType: STR
+    maxLen: 16
+    minLen: 6
+    name: report_type
+
+  - fieldType: EMPTY
+    maxLen: 1000
+    name: remarks
+
+  - dateFormat: MM/dd/yyyy hh:mm:ss a
+    fieldType: DATE
+    maxDate: 1643885937000
+    minDate: 1600913233000
+    name: effective_start_date
+
+  - fieldType: EMPTY
+    name: effective_end_date
+
+  - dateFormat: MM/dd/yyyy hh:mm:ss a
+    fieldType: DATE
+    maxDate: 1644309263000
+    minDate: 1600997835000
+    name: create_date
+
+  - fieldType: STATIC
+    name: created_by
+    staticValue: zjH
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 20
+      - 80
+      fields:
+
+      - dateFormat: MM/dd/yyyy hh:mm:ss a
+        fieldType: DATE
+        maxDate: 1641294890000
+        minDate: 1637230140000
+
+      - fieldType: EMPTY
+    name: last_updated_date
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 21
+      - 79
+      fields:
+
+      - fieldType: STATIC
+        staticValue: zjH
+
+      - fieldType: EMPTY
+    name: last_updated_by
+
+  - fieldType: STATIC
+    name: active_flag
+    staticValue: Y
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 30
+      - 70
+      fields:
+
+      - fieldType: STATIC
+        staticValue: zjHaM
+
+      - fieldType: EMPTY
+    name: exam
+
+- containerName: table_6
+  containerType: CSV
+  fields:
+
+  - fieldType: STR
+    maxLen: 20
+    minLen: 6
+    name: report_type_id
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 81
+      - 19
+      fields:
+
+      - fieldType: STR
+        maxLen: 42
+        minLen: 11
+
+      - fieldType: SENTENCE
+        maxLen: 42
+        minLen: 11
+    name: description
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 25
+      - 75
+      fields:
+
+      - fieldType: INT
+        high: 24.0
+        low: 10.0
+
+      - fieldType: EMPTY
+    name: minimum_items
+
+  - fieldType: EMPTY
+    high: 999.0
+    name: minimum_examinees
+
+- containerName: table_7
+  containerType: CSV
+  fields:
+
+  - fieldType: INC_INT
+    name: profile_category_id
+
+  - fieldType: INC_INT
+    name: profile_examinee_id
+    reference: table_1.profile_examinee_id
+
+  - fieldType: INT
+    high: 19.0
+    low: 0.0
+    name: customer_sort_order
+
+  - fieldType: STR
+    maxLen: 21
+    minLen: 11
+    name: category_name
+
+  - fieldType: STR
+    maxLen: 20
+    minLen: 7
+    name: category_description
+
+  - fieldType: INT
+    high: 90.0
+    low: 50.0
+    name: scaled_score
+
+  - fieldType: INT
+    high: 77.0
+    low: 2.0
+    name: raw_score
+
+  - fieldType: INT
+    high: 99.0
+    low: 18.0
+    name: percent_correct_score
+
+  - fieldType: DOUBLE
+    high: 7.97
+    low: 4.13
+    name: sem
+
+  - fieldType: INT
+    high: 19.0
+    low: 0.0
+    name: report_sort_order
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 10
+      - 90
+      fields:
+
+      - fieldType: STATIC
+        staticValue: '0'
+
+      - fieldType: DOUBLE
+        high: 3.46
+        low: 0.0
+    name: physical_bar_left_position
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 14
+      - 86
+      fields:
+
+      - fieldType: STATIC
+        staticValue: '0'
+
+      - fieldType: DOUBLE
+        high: 3.96
+        low: 0.99
+    name: physical_bar_right_position
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 4
+      - 96
+      fields:
+
+      - fieldType: STATIC
+        staticValue: f
+
+      - fieldType: EMPTY
+    name: left_overflow_indicator
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 9
+      - 91
+      fields:
+
+      - fieldType: STATIC
+        staticValue: f
+
+      - fieldType: EMPTY
+    name: right_overflow_indicator
+
+  - fieldType: EMPTY
+    name: sem_bar_width_factor
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: header_description
+
+  - fieldType: EMPTY
+    name: bar_left_position
+
+  - fieldType: EMPTY
+    name: bar_right_position
+
+  - fieldType: EMPTY
+    name: physical_score
+
+  - fieldType: INC_INT
+    name: score_category_id
+    reference: table_8.score_category_id
+
+  - fieldType: EMPTY
+    name: std_deviation
+
+  - fieldType: EMPTY
+    name: sd_bar_width_factor
+
+  - fieldType: EMPTY
+    name: plot_low
+
+  - fieldType: EMPTY
+    name: plot_high
+
+  - fieldType: EMPTY
+    name: plot_median
+
+  - fieldType: EMPTY
+    name: plot_q1
+
+  - fieldType: EMPTY
+    name: plot_q3
+
+  - fieldType: EMPTY
+    maxLen: 200
+    name: category_img_path
+
+  - fieldType: EMPTY
+    maxLen: 200
+    name: group_img_path
+
+  - fieldType: EMPTY
+    name: physical_plot_q1_position
+
+  - fieldType: EMPTY
+    name: physical_plot_q3_position
+
+  - fieldType: EMPTY
+    name: physical_plot_low_position
+
+  - fieldType: EMPTY
+    name: physical_plot_high_position
+
+  - fieldType: EMPTY
+    name: physical_plot_median_position
+
+  - fieldType: EMPTY
+    name: test_score1
+
+  - fieldType: EMPTY
+    name: item_percent_min
+
+  - fieldType: EMPTY
+    name: item_percent_max
+
+  - fieldType: EMPTY
+    maxLen: 10
+    name: score_type
+
+  - fieldType: EMPTY
+    name: test_score2
+
+  - fieldType: EMPTY
+    name: comparison_mean
+
+- containerName: table_8
+  containerType: CSV
+  fields:
+
+  - fieldType: INC_INT
+    maxLen: 3
+    name: score_category_id
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 97
+      - 3
+      fields:
+
+      - fieldType: STR
+        maxLen: 35
+        minLen: 4
+
+      - fieldType: SENTENCE
+        maxLen: 35
+        minLen: 4
+    name: short_title
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 89
+      - 11
+      fields:
+
+      - fieldType: STR
+        maxLen: 68
+        minLen: 4
+
+      - fieldType: SENTENCE
+        maxLen: 68
+        minLen: 4
+    name: long_title
+
+  - fieldType: STR
+    maxLen: 7
+    minLen: 2
+    name: report_short_name
+
+- containerName: table_9
+  containerType: CSV
+  fields:
+
+  - fieldType: INC_INT
+    name: item_detail_id
+
+  - fieldType: INC_INT
+    name: item_subset_detail_id
+    reference: table_10.item_subset_detail_id
+
+  - fieldType: INC_INT
+    name: report_id
+
+  - fieldType: STR
+    maxLen: 8
+    minLen: 8
+    name: item_stem_object_id
+
+  - fieldType: STR
+    maxLen: 7
+    minLen: 7
+    name: medley_id
+
+  - fieldType: INT
+    high: 97.0
+    low: 2.0
+    maxLen: 40
+    name: reference_name
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 94
+      - 6
+      fields:
+
+      - fieldType: STR
+        maxLen: 67
+        minLen: 4
+
+      - fieldType: SENTENCE
+        maxLen: 67
+        minLen: 4
+    name: item_description
+
+  - fieldType: STR
+    maxLen: 29
+    minLen: 19
+    name: step1_outline
+
+  - fieldType: STR
+    maxLen: 30
+    minLen: 18
+    name: organ_system
+
+  - fieldType: STR
+    maxLen: 21
+    minLen: 11
+    name: vignette
+
+  - fieldType: DOUBLE
+    high: 0.94
+    low: 0.13
+    name: local_difficulty
+
+  - fieldType: DOUBLE
+    high: 0.98
+    low: 0.4
+    name: step1_difficulty
+
+  - fieldType: DOUBLE
+    high: 0.31
+    low: -0.75
+    name: difficulty_difference
+
+  - fieldType: DOUBLE
+    high: 0.64
+    low: -0.12
+    name: local_corrected_biserial
+
+  - fieldType: INT
+    high: 93.0
+    low: 1.0
+    name: sort_order
+
+  - fieldType: EMPTY
+    name: national_difficulty
+
+  - fieldType: EMPTY
+    maxLen: 11
+    name: exam_instance
+
+  - fieldType: EMPTY
+    maxLen: 40
+    name: stat_source
+
+  - fieldType: EMPTY
+    maxLen: 400
+    name: keyword
+
+  - fieldType: EMPTY
+    maxLen: 400
+    name: description
+
+  - fieldType: EMPTY
+    high: 9.0
+    name: test_score
+
+  - fieldType: EMPTY
+    maxLen: 200
+    name: item_phrase1
+
+  - fieldType: EMPTY
+    maxLen: 200
+    name: item_phrase2
+
+  - fieldType: EMPTY
+    maxLen: 200
+    name: item_phrase3
+
+  - fieldType: EMPTY
+    high: 99999.0
+    name: item_id
+
+  - fieldType: EMPTY
+    maxLen: 500
+    name: item_score_categories
+
+- containerName: table_10
+  containerType: CSV
+  fields:
+
+  - fieldType: INC_INT
+    name: item_subset_detail_id
+
+  - fieldType: INC_INT
+    name: report_id
+
+  - fieldType: STR
+    maxLen: 15
+    minLen: 4
+    name: subset_description
+
+  - fieldType: INT
+    high: 200.0
+    low: 13.0
+    name: item_count
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 73
+      - 27
+      fields:
+
+      - fieldType: DOUBLE
+        high: 0.9
+        low: 0.0
+
+      - fieldType: EMPTY
+    name: avg_local_difficulty
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 55
+      - 45
+      fields:
+
+      - fieldType: DOUBLE
+        high: 0.91
+        low: 0.66
+
+      - fieldType: EMPTY
+    name: avg_step1_difficulty
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 4
+      - 60
+      - 36
+      fields:
+
+      - fieldType: STATIC
+        staticValue: '0'
+
+      - fieldType: DOUBLE
+        high: 0.13
+        low: -0.37
+
+      - fieldType: EMPTY
+    name: avg_difficulty_difference
+
+  - fieldType: FREQ
+    frequency:
+      counts:
+      - 55
+      - 45
+      fields:
+
+      - fieldType: DOUBLE
+        high: 0.46
+        low: 0.0
+
+      - fieldType: EMPTY
+    name: avg_local_corrected_biserial
+
+  - fieldType: INT
+    high: 20.0
+    low: 0.0
+    name: sort_order
+
+  - fieldType: EMPTY
+    name: avg_national_difficulty
+
+  - fieldType: EMPTY
+    maxLen: 3
+    name: score_category_id
+
+  - fieldType: EMPTY
+    maxLen: 100
+    name: header_description
+
+  - fieldType: EMPTY
+    maxLen: 10
+    name: test_proportion
+
+  - fieldType: INC_INT
+    name: profile_examinee_id
+    reference: table_1.profile_examinee_id

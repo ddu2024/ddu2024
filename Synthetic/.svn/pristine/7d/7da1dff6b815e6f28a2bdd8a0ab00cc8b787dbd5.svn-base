@@ -1,0 +1,59 @@
+!!org.nbme.dwbi.synthetic.model.Metadata
+objects:
+
+- containerName: SAMPLE_OUTPUT_REDUCED
+  containerType: JSON
+  fields:
+
+  - fieldType: ARRAY
+    maxSubFields: 3
+    minSubFields: 3
+    name: result
+    subFields:
+
+    - fieldType: EMPTY
+      name: parent
+
+    - fieldType: STATIC
+      name: number
+      staticValue: VbHNgRabo
+
+    - fieldType: EMPTY
+      name: u_estimation_filled_date
+
+    - fieldType: STR
+      maxLen: 14
+      minLen: 10
+      name: sys_updated_by
+
+    - fieldType: ARRAY
+      maxSubFields: 3
+      minSubFields: 1
+      name: opened_by
+      subFields:
+
+      - fieldType: URL
+        name: link
+
+      - fieldType: STR
+        maxLen: 36
+        minLen: 32
+        name: value
+
+    - fieldType: EMPTY
+      name: user_input
+
+    - fieldType: SUBSET
+      name: u_resolved_by
+      subFields:
+
+      - fieldType: STATIC
+        name: link
+        staticValue: www.reynaldo-hackett.com
+
+      - fieldType: STATIC
+        name: value
+        staticValue: VbHNgRaboBxKXrwayvtQJlczfmTKFG
+
+    - fieldType: EMPTY
+      name: approval_history

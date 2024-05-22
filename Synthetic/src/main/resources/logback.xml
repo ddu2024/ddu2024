@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <contextName>Synthetic</contextName>
+    <jmxConfigurator/>
+
+    <if condition='isDefined("LOG_HOME")'>
+        <then>
+            <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>${LOG_HOME}/Synthetic.log</file>
+                <append>true</append>
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                    <!-- daily rollover -->
+                    <fileNamePattern>${LOG_HOME}/Synthetic.%d{yyyy-MM-dd}.log</fileNamePattern>
+                    <!-- keep 30 days' worth of history -->
+                    <maxHistory>30</maxHistory>
+                </rollingPolicy>
+                <encoder>
+                    <Pattern>%d{dd MMM yyyy HH:mm:ss} %-5level %logger %L - %msg %n</Pattern>
+                </encoder>
+            </appender>
+        </then>
+        <else>
+            <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>Synthetic.log</file>
+                <append>true</append>
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                    <!-- daily rollover -->
+                    <fileNamePattern>Synthetic.%d{yyyy-MM-dd}.log</fileNamePattern>
+                    <!-- keep 30 days' worth of history -->
+                    <maxHistory>30</maxHistory>
+                </rollingPolicy>
+                <encoder>
+                    <Pattern>%d{dd MMM yyyy HH:mm:ss} %-5level %logger %L - %msg %n</Pattern>
+                </encoder>
+            </appender>
+        </else>
+    </if>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{dd MMM yyyy HH:mm:ss} %-5level %logger %L - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+	<if condition='isDefined("DEBUG_LOGGING")'>
+		<then>
+    		<logger name="org.nbme.dwbi.synthetic.Application" level="error" />
+			<logger name="org.nbme.dwbi" level="debug" />
+			<logger name="org.springframework" level="debug" />
+			<root level="INFO">
+				<appender-ref ref="FILE" />
+				<appender-ref ref="CONSOLE" />
+			</root>
+		</then>
+		<else>
+    		<logger name="org.nbme.dwbi.synthetic.Application" level="error" />
+			<root level="INFO">
+				<appender-ref ref="FILE" />
+				<appender-ref ref="CONSOLE" />
+			</root>
+		</else>
+	</if>
+
+</configuration>
